@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/luqmannnn/ecs-fargate#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.3"
   }
 }
