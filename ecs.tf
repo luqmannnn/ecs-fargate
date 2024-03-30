@@ -53,6 +53,12 @@ resource "aws_ecs_service" "own_service" {
     rollback        = true
   }
 
+  load_balancer {
+    target_group_arn = aws_lb_target_group.ecs-alb-tg.arn
+    container_name   = "NGINX"
+    container_port   = 80
+  }
+
   network_configuration {
     subnets          = data.aws_subnets.existing_subnets.ids
     assign_public_ip = true
